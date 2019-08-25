@@ -1,0 +1,2 @@
+
+-DCATKIN_DEVEL_PREFIX=/home/bill/sensor_ws/devel -DCMAKE_INSTALL_PREFIX=/home/bill/sensor_ws/install -G Unix Makefiles
