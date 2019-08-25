@@ -1,0 +1,14 @@
+<launch>
+		<include file="$(find rplidar_ros)/launch/rplidar.launch" /> 
+
+		<node pkg="laser_filters" type="scan_to_scan_filter_chain" name="laser_filter">
+			<rosparam command="load" file="$(find rplidar_launch)/config/laser_filter_config.yaml"/>
+		</node>
+
+		<!-- <node pkg="tf" type="static_transform_publisher" name="rplidar_to_velodyne_transform" args="0.37 0  -0.63 -0.10 0 0 /velodyne /laser 5" />
+ -->
+		<node pkg="rplidar_launch" type="laserscan_to_pointcloud" name="scan_to_pcl" output="screen"/>
+
+		<node pkg="rplidar_launch" type="stop_when_too_close" name="stop_when_close" output="screen"/>
+
+</launch>
