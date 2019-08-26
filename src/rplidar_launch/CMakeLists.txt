@@ -49,7 +49,7 @@ add_executable(laserscan_to_pointcloud src/laserscan_to_pointcloud.cpp)
 add_executable(stop_when_too_close src/stop_when_too_close.cpp)
 
 
-target_link_libraries(laserscan_to_pointcloud ${catkin_LIBRARIES} Eigen3::Eigen)
+target_link_libraries(laserscan_to_pointcloud ${catkin_LIBRARIES} )
 
 
-target_link_libraries(stop_when_too_close ${catkin_LIBRARIES} Eigen3::Eigen)
+target_link_libraries(stop_when_too_close ${catkin_LIBRARIES} )
